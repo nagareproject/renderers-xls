@@ -1,10 +1,19 @@
+# --
+# Copyright (c) 2014-2025 Net-ng.
+# All rights reserved.
+#
+# This software is licensed under the BSD License, as described in
+# the file LICENSE.txt, which you should have received as part of
+# this distribution.
+# --
+
 from nagare.renderers import xls
 
 expenses = (
     ['Rent', 1000],
-    ['Gas',   100],
-    ['Food',  300],
-    ['Gym',    50],
+    ['Gas', 100],
+    ['Food', 300],
+    ['Gym', 50],
 )
 
 x = xls.Renderer()
@@ -29,7 +38,7 @@ with x.workbook:
             'Hello world',
             font={'name': 'Arial', 'size': 14, 'bold': True},
             align={'vertical': 'middle', 'horizontal': 'center'},
-            gradient={'colors': ['#DDEBCF', '#9CB86E', '#156B13']}
+            gradient={'colors': ['#DDEBCF', '#9CB86E', '#156B13']},
         )
 
     x << x.worksheet('DATA 2')
